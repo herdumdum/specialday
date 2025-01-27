@@ -97,8 +97,8 @@ gsap.set(".daisy", {
       .to(".idea-8", { duration: 0.7, ...ideaTextTransLeave }, "-=2")
       
       
-      .from(".idea-9", { duration: 0.7, ...ideaTextTrans })
-      .to(".idea-9", { duration: 0.7, ...ideaTextTransLeave }, "+=1")
+      .from(".idea-9", { duration: 0.7, ...ideaTextTrans },"-=1")
+      .to(".idea-9", { duration: 0.7, ...ideaTextTransLeave }, "+=2")
       .from(".idea-10", { duration: 0.7, ...ideaTextTrans })
       .to(".idea-10", { duration: 0.7, ...ideaTextTransLeave }, "+=2")
 
@@ -121,27 +121,27 @@ gsap.set(".daisy", {
       .from(".idea-17", { duration: 0.7, ...ideaTextTrans })
       .to(".idea-17", { duration: 0.7, ...ideaTextTransLeave }, "+=2")
 
-      //hehe animation
+      // Hehe animation
       .from(".hehe", {
         duration: 0.8,
         opacity: 0,
         rotation: 15,
         ease: "expo.out",
-        stagger: 0.2,
+        stagger: 0.2, // Applies the stagger here
       })
       .to(".hehe", {
         duration: 0.5,
-        opacity: 1,
-
-      })
+        opacity: 1, // Ensures visibility
+        scale: 3, // Applies scale properly
+        ease: "power2.out", // Smooth scaling
+      }, "+=0.2") // Slight delay before scaling
       .to(".hehe", {
         duration: 0.8,
-        scale: 6,
         opacity: 0,
-        rotation: -15,
+        rotation: -15, // Ends with rotation
         ease: "expo.out",
-        stagger: 0.2,
-      }, "+=1.5")
+        stagger: 0.2, // Applies stagger here too
+      }, "+=1.5") // Delay before fading out
 
       .from(".idea-19", { duration: 0.7, ...ideaTextTrans })
       .to(".strong", {
@@ -162,12 +162,12 @@ gsap.set(".daisy", {
         y: 50,
         z: 10,
         opacity: 0,
-      }, "+=1.5")
-      .to(".idea-20", { duration: 0.7, scale: 0.2, opacity: 0}, "+=2")
+      })
+      .to(".idea-20", { duration: 0.7, scale: 0.2, opacity: 0}, "+=1.5")
 
       .from(".first-smile", { duration: 0.5, ...ideaTextTrans },)
       .to(".first-smile", { duration: 0.5, rotation: 90 },"+=1")
-      .to(".first-smile", { duration: 0.5, scale: 2, ...ideaTextTransLeave }, "+=1")
+      .to(".first-smile", { duration: 0.5, scale: 3, ...ideaTextTransLeave }, "+=1")
 
 
       .fromTo(".baloons img", {
@@ -228,10 +228,15 @@ gsap.set(".daisy", {
         tl.restart();
       });
 
-      // Redirect to another page on click
-      const redirectBtn = document.getElementById("dand");
+      // Redirect to adoreyou on click
+      const redirectBtn = document.getElementById("adoreyou");
       redirectBtn.addEventListener("click", () => {
-        window.location.href = "/song";
+        window.location.href = "/adoreyou";
+      });
+
+      const nightBtn = document.getElementById("night");
+      nightBtn.addEventListener("click", () => {
+        window.location.href = "/nightchanges";
       });
 
   };
