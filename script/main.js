@@ -231,12 +231,12 @@ gsap.set(".daisy", {
       // Redirect to adoreyou on click
       const redirectBtn = document.getElementById("adoreyou");
       redirectBtn.addEventListener("click", () => {
-        window.location.href = "/adoreyou";
+        window.location.href = "specialday/adoreyou";
       });
 
       const nightBtn = document.getElementById("night");
       nightBtn.addEventListener("click", () => {
-        window.location.href = "/nightchanges";
+        window.location.href = "specialday/nightchanges";
       });
 
   };
