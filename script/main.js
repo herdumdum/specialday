@@ -27,6 +27,11 @@ gsap.set(".daisy", {
   rotation: () => gsap.utils.random(0, 360), // Random rotation
 });
 
+const elements = document.querySelectorAll('#replay, #adoreyou, #night');
+    elements.forEach((element) => {
+      element.style.pointerEvents = 'none';
+    });
+
 
 
 
@@ -46,13 +51,7 @@ gsap.set(".daisy", {
       rotationY: 5,
       skewX: "-15deg",
     };
-
-    const elements = document.querySelectorAll('#replay, #adoreyou, #night');
-    elements.forEach((element) => {
-      element.style.pointerEvents = 'none';
-    });
     
-
   
     // Timeline
     const tl = gsap.timeline();
