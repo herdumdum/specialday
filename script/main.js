@@ -47,8 +47,11 @@ gsap.set(".daisy", {
       skewX: "-15deg",
     };
 
-    const animatedElement = document.getElementById('replay, adoreyou, night');
-    animatedElement.style.pointerEvents = 'none';
+    const elements = document.querySelectorAll('#replay, #adoreyou, #night');
+    elements.forEach((element) => {
+      element.style.pointerEvents = 'none';
+    });
+    
 
   
     // Timeline
@@ -224,8 +227,11 @@ gsap.set(".daisy", {
       })
       .to(".six", { duration: 0.5, opacity: 0, y: 30, zIndex: "-1" })
       .from(".nine p", { duration: 1, ...ideaTextTrans, stagger: 1.2, onComplete: () => {
-        animatedElement.style.pointerEvents = 'auto';
-      }
+        // Re-enable pointer events after the animation completes
+        elements.forEach((element) => {
+          element.style.pointerEvents = 'auto';
+        });
+      }    
     })
       .to(".last-smile", { duration: 0.5, rotation: 90 }, "+=1");
   
