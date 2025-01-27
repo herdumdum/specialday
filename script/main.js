@@ -46,6 +46,10 @@ gsap.set(".daisy", {
       rotationY: 5,
       skewX: "-15deg",
     };
+
+    const animatedElement = document.getElementById('replay, adoreyou, night');
+    animatedElement.style.pointerEvents = 'none';
+
   
     // Timeline
     const tl = gsap.timeline();
@@ -219,7 +223,10 @@ gsap.set(".daisy", {
         stagger: 0.3,
       })
       .to(".six", { duration: 0.5, opacity: 0, y: 30, zIndex: "-1" })
-      .from(".nine p", { duration: 1, ...ideaTextTrans, stagger: 1.2 })
+      .from(".nine p", { duration: 1, ...ideaTextTrans, stagger: 1.2, onComplete: () => {
+        animatedElement.style.pointerEvents = 'auto';
+      }
+    })
       .to(".last-smile", { duration: 0.5, rotation: 90 }, "+=1");
   
       // Restart Animation on click
@@ -231,13 +238,12 @@ gsap.set(".daisy", {
       // Redirect to adoreyou on click
       const redirectBtn = document.getElementById("adoreyou");
       redirectBtn.addEventListener("click", () => {
-        window.location.href = "specialday/adoreyou";
+        window.location.href = "adoreyou";
       });
 
       const nightBtn = document.getElementById("night");
       nightBtn.addEventListener("click", () => {
-        window.location.href = "specialday/nightchanges";
+        window.location.href = "nightchanges";
       });
-
   };
   
