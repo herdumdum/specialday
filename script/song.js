@@ -10,9 +10,9 @@ window.addEventListener("load", () => {
     }).then((result) => {
       if (result.isConfirmed) {
         document.querySelector(".song").play();
-        animationTimeline();
-      } else {
-        animationTimeline();
+      //   // animationTimeline();
+      // } else {
+      //   animationTimeline();
       }
     });
   });
