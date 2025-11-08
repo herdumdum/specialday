@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/gif" href="https://media.tenor.com/hCTuN6YIekoAAAAj/heart-art.gif" />
+    <title>bye</title>
+
+<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="./style/main.css" />
+
+    <style>
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(5px);
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+      body {
+        background-image: url('./img/bye.jpg');
+        color: white;
+        font-family: 'Cormorant Garamond', serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .poem-container {
+        max-width: 750px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.0);
+      }
+
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+      }
+
+      p {
+        white-space: pre-line;
+        line-height: 2;
+    text-align: left;
+        font-size: 1.75rem;
+        font-weight: 400;
+      }
+
+      /* Strikethrough text between ~ ~ */
+      p {
+        --striked: "~(.*?)~";
+      }
+      p::before {
+        content: "";
+      }
+
+      /* JS-less strikethrough using regex-style replacements is not possible directly in CSS,
+         so we’ll use <del> tags manually below for those words. */
+    </style>
+  </head>
+
+  <body>
+<a href="index.html" class="home-btn">Home</a>
+    <div class="poem-container">
+      <h1>Every Hour</h1>
+      <p>
+just as i was inspired
+by the poets,
+by the poems,
+i was motivated
+by your love.
+
+so oh love, my love,
+take hold of me
+and never let go,
+for i am worthless
+if not to be seen by you,
+for i am useless
+if not to be of any use to you.
+
+for i want to die in nowhere
+but your arms,
+for i can't see a home
+that isn't by your shore.
+
+and i don't know if you love me, but—
+oh lover, my lover,
+i love you
+so much more.
+
+my heart gets sore,
+it pains, it aches,
+every time it's reminded of you.
+reminded of you, every hour i am,
+by everything i do.
+i miss it with you.
+
+so i wonder—
+everything we do,
+do you miss it too?
+like the way i think of you,
+do you think of me too?
+
+i understand, but still,
+i wish you were here—
+and a liar i would be
+if i said otherwise.
+
+and i know we <del>will</del> won't meet,
+but oh dove, my dove,
+every hour, you kill me,
+what if i, die tonight?
+      </p>
+    </div>
+  </body>
+</html>
